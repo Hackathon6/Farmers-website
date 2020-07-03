@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>{{article.product}}</h1>
+  <small>Produced by {{article.name}} on {{article.create_date}}</small>
+  <hr>
+  <div>
+    {{article.variety | safe}}
+    {{article.packaging_type | safe}}
+    {{article.packaging_size | safe}}
+    {{article.quantity_expected | safe}}
+    {{article.quality_expected | safe}}
+    {{article.price | safe}}
+    {{article.state | safe}}
+  </div>
+{% endblock %}
