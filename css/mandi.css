@@ -19,5 +19,28 @@ h1 {
 /* Header Ends */
 
 body {
-  background-color: cadetblue;
+  background-color: #95c9c1;
+}
+
+tr {
+  background-color: white;
+}
+table {
+  border: 5px solid black;
+}
+th {
+  font-weight: 700;
+  font-family: cursive;
+}
+th.px-4.py-3.title-font.tracking-wider.font-medium.text-gray-900.text-sm.bg-gray-200 {
+  font-size: 25px;
+}
+td.px-4.py-3 {
+  text-align: center;
+}
+th.px-4.py-3.title-font.tracking-wider.font-medium.text-gray-900.text-sm.bg-gray-200 {
+  text-align: center;
+}
+#pricing-header {
+  font-size: 80px;
 }
