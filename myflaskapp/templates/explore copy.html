@@ -4,18 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{url_for('static',filename='css/explore.css')}}" />
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@0.7.4/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <script id="gs-sdk" src='//www.buildquickbots.com/botwidget/v3/demo/static/js/sdk.js?v=3' key="6bdbc48b-a2d0-4c18-8141-544d7d9ab94c" ></script>
+    <div align="padding-left" id="google_translate_element"> </div>  
+      
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+     
+}
+</script>
+   
   </head>
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Atmanirbhar Kissan</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/commodities">Commodities</a></li>         
+            <li><a href="/Mandi Price">Mandi Price</a></li>
+            
+            <li><a href="/protip">Pro Tips</a></li>
+            
+          </ul>
+  
+          <ul class="nav navbar-nav navbar-right">
+              {% if session.logged_in %}
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/logout">Logout</a></li>
+              {% else %}
+                <li><a href="/register">Registeration</a></li>
+                <li><a href="/login">Login</a></li>
+              {% endif %}
+  
+            </ul>
+      </div><!--/.nav-collapse -->
+  </div>
+  </nav>
+  
     <header id="header">
       <div class="wrapper">
         <h1>Explore</h1>
       </div>
     </header>
+
 
     <section class="text-gray-700 body-font">
       <div class="container px-5 py-24 mx-auto">

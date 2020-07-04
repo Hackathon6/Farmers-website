@@ -1,16 +1,71 @@
 {% extends 'layout.html' %}
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/mandi.css')}}" />
+<link
+href="https://cdn.jsdelivr.net/npm/tailwindcss@0.7.4/dist/tailwind.min.css"
+rel="stylesheet"
+/>
+<link
+rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+{% endblock %}
 
 {% block body %}
-  <h1>{{article.product}}</h1>
-  <small>Produced by {{article.name}} on {{article.create_date}}</small>
-  <hr>
+  <h1></h1>
+  
   <div> 
-    {{article.variety | safe}}
-    {{article.packaging_type | safe}}
-    {{article.packaging_size | safe}}
-    {{article.quantity_expected | safe}}
-    {{article.quality_expected | safe}}
-    {{article.price | safe}}
-    {{article.state | safe}}
+    <table class="table table-hover table-dark">
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Product</td>
+          <td>{{article.product}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Type</td>
+          <td> {{article.variety | safe}}</td> 
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Packaging Type</td>
+          <td>{{article.packaging_type | safe}}</td> 
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Packaging Size</td>
+          <td>{{article.packaging_size | safe}}</td> 
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Quantity Available</td>
+          <td>{{article.quantity_expected | safe}}</td> 
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Quality</td>
+          <td>{{article.quality_expected | safe}}</td> 
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Price</td>
+          <td>{{article.price | safe}}</td> 
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>State</td>
+          <td>{{article.state | safe}}</td> 
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td>Name of the farmer</td>
+          <td>{{article.name | safe}}</td> 
+        </tr>
+       
+      </tbody>
+    </table>
+
   </div>
 {% endblock %}

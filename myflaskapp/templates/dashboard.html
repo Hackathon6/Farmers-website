@@ -18,7 +18,7 @@ href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min
   <hr>
   <table class="table table-striped">
     <tr>
-      <th>ID</th>
+     
       <th>Name</th>
       <th>Product</th>
       <th>Variety</th>
@@ -28,7 +28,7 @@ href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min
       <th>quality_expected</th>
       <th>price</th>
       <th>state</th>
-      <th>Date</th>
+      
       
 
       <th></th>
@@ -37,7 +37,6 @@ href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min
     </tr>
     {% for article in articles %}
       <tr>
-        <td>{{article.id}}</td>
         <td>{{article.name}}</td>
         <td>{{article.product}}</td>
         <td>{{article.variety}}</td>
@@ -47,7 +46,7 @@ href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min
         <td>{{article.quality_expected}}</td>
         <td>{{article.price}}</td>
         <td>{{article.state}}</td>
-        <td>{{article.create_date}}</td>
+        
         <td><a href="edit_article/{{article.id}}" class="btn btn-default pull-right">Edit</a></td>
         <td>
           <form action="{{url_for('delete_article', id=article.id)}}" method="post">
