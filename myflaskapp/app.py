@@ -5,6 +5,7 @@ from wtforms import Form, StringField, TextAreaField, PasswordField, IntegerFiel
 from passlib.hash import sha256_crypt
 from functools import wraps
 
+
 app = Flask(__name__)
 
 
@@ -21,10 +22,10 @@ mysql = MySQL(app)
 @app.route('/')
 def index():
     return render_template('home.html')
-
-# Articles
+ 
+ #explore
 @app.route('/commodities')
-def articles():
+def product():
     # Create cursor
     cur = mysql.connection.cursor()
 
@@ -40,10 +41,26 @@ def articles():
         return render_template('articles.html', msg=msg)
     # Close connection
     cur.close()
+    
 
+# Mandi Price
+@app.route('/Mandi Price')
+def mandi():
+    return render_template('mandi.html')
+
+# Mandi Price
+@app.route('/protip')
+def protip():
+    return render_template('protip.html')
+
+# commodities
+@app.route('/commodities')
+def articles():
+    return render_template('explore.html')
+   
 
 #Single Article
-@app.route('/article/<string:id>/')
+@app.route('/commodities/<string:id>/')
 def article(id):
     # Create cursor
     cur = mysql.connection.cursor()
@@ -246,7 +263,7 @@ def edit_article(id):
     form.packaging_type.data=article['packaging_type']
     form.packaging_size.data=article['packaging_size']
     form.quantity_expected.data=article['quantity_expected']
-    form.quality_expected.data=article['quality_expexted']
+    form.quality_expected.data=article['quality_expected']
     form.price.data=article['price']
     form.state.data=article['state']
 

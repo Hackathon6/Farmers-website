@@ -3,7 +3,7 @@
 
 {% block body %}
   <h1>Dashboard <small> Welcome {{session.username}}</small></h1>
-  <a class="btn btn-success" href="/add_article"> Add Article</a>
+  <a class="btn btn-success" href="/add_article"> Add Product</a>
   <hr>
   <table class="table table-striped">
     <tr>
@@ -16,9 +16,11 @@
       <th>quantity_expected</th>
       <th>quality_expected</th>
       <th>price</th>
+      <th>state</th>
       <th>Date</th>
       
 
+      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -42,6 +44,7 @@
             <input type="submit" value="Delete" class="btn btn-danger">
           </form>
         </td>
+        <td></td>
       </tr>
     {% endfor %}
   </table>

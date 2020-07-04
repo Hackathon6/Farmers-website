@@ -4,23 +4,36 @@
     <meta charset="utf-8">
     <title>Farmers Market</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script id="gs-sdk" src='//www.buildquickbots.com/botwidget/v3/demo/static/js/sdk.js?v=3' key="6bdbc48b-a2d0-4c18-8141-544d7d9ab94c" ></script>
+  
+    <div align="padding-left" id="google_translate_element"> </div>  
+      
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+     
+}
 
-   {% head block %}{% endblock %}
+</script>
+ {% block head %}{% endblock %}
   </head>
   <body>
     {% include 'includes/_navbar.html' %}
-    <div class="container">
+    
       {% include 'includes/_messages.html' %}
       
       {% block body %}{% endblock %}
-    </div>
+    
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
-    <script type="text/javascript">
-      CKEDITOR.replace('editor')
-    </script>
+
     
   </body>
 </html>
