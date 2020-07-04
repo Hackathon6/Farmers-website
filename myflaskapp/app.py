@@ -56,17 +56,17 @@ def protip():
 # commodities
 @app.route('/commodities')
 def articles():
-    return render_template('explore.html')
+    return render_template('explore copy.html')
    
 
 #Single Article
-@app.route('/article/<string:id>/')
-def article(id):
+@app.route('/commodities/<string:product>/article/<string:name>')
+def article(name,product):
     # Create cursor
     cur = mysql.connection.cursor()
 
     # Get article
-    cur.execute("SELECT * FROM articles WHERE id = %s", [id])
+    cur.execute("SELECT * FROM articles WHERE name = %s", [name])
 
     article = cur.fetchone()
 
