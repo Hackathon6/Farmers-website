@@ -55,3 +55,20 @@ h2.text-gray-900.text-lg.title-font.font-medium.mb-3 {
 h1#pricing-headers {
   text-transform: uppercase;
 }
+
+.wrapper {
+  transform: (-50%, -50%);
+}
+.wrapper h1 {
+  border-radius: 50px;
+  align-items: center;
+  font-family: poppins;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7),
+    -4px -4px 8px rgba(255, 255, 255, 1);
+  color: #000;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  text-align: center;
+}
