@@ -32,19 +32,3 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 //Slideshow ends
-$(document).ready(function () {
-  function showWindow() {
-    $("#main").show();
-    $("html body").css("overflow", "hidden");
-  }
-
-  function hideWindow() {
-    $("#main").hide();
-    $("html body").css("overflow", "scroll");
-  }
-
-  setTimeout(showWindow, 3000);
-  $("#close-btn").click(function () {
-    hideWindow();
-  });
-});
