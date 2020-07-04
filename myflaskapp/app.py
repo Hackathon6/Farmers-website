@@ -24,13 +24,13 @@ def index():
     return render_template('home.html')
  
  #explore
-@app.route('/commodities')
-def product():
+@app.route('/commodities/<string:product>/')
+def product(product):
     # Create cursor
     cur = mysql.connection.cursor()
 
     # Get articles
-    result = cur.execute("SELECT * FROM articles")
+    result= cur.execute("SELECT * FROM articles WHERE product= %s" , [product] )
 
     articles = cur.fetchall()
 
@@ -60,7 +60,7 @@ def articles():
    
 
 #Single Article
-@app.route('/commodities/<string:id>/')
+@app.route('/article/<string:id>/')
 def article(id):
     # Create cursor
     cur = mysql.connection.cursor()
@@ -78,11 +78,13 @@ class RegisterForm(Form):
     name = StringField('Name', [validators.Length(min=1, max=50)])
     username = StringField('Username', [validators.Length(min=4, max=25)])
     email = StringField('Email', [validators.Length(min=6, max=50)])
+    mobile_no=IntegerField('mobile no')
     password = PasswordField('Password', [
         validators.DataRequired(),
         validators.EqualTo('confirm', message='Passwords do not match')
     ])
     confirm = PasswordField('Confirm Password')
+    address=TextAreaField('address')
 
 
 # User Register
@@ -203,6 +205,7 @@ class ArticleForm(Form):
     quality_expected = StringField('Quality Expected', [validators.Length(min=1, max=50)])
     price = StringField('Price')
     state = StringField('State', [validators.Length(min=1, max=50)])
+    productid=StringField('product_id')
    
 
 # Add Article

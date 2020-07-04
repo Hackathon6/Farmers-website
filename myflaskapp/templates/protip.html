@@ -1,16 +1,15 @@
 {% extends 'layout.html' %}
-{% block head%}
-<script id="gs-sdk" src='//www.buildquickbots.com/botwidget/v3/demo/static/js/sdk.js?v=3' key="6bdbc48b-a2d0-4c18-8141-544d7d9ab94c" ></script>
-  <meta charset="UTF-8">
+  
+  {% block head %}
   
   <link rel="stylesheet" href="{{url_for('static',filename='css/protip.css')}}">
   <script src="https://kit.fontawesome.com/b069fdbc0a.js" crossorigin="anonymous"></script>
+  {% endblock %}
 
-{%endblock%}
-{% block body %}
-<header id="header">
-  <div class="wrapper">
-    <h1>PRO TIP</h1>
+  {% block body %}
+  <div class="title">
+    <h1>ProTip</h1>
+   <a href="/commodities/Rice/"> <h3>Info for farmers</h3></a>
   </div>
 </header>
   <div class="container">
@@ -276,4 +275,4 @@
     </div>
 
   </div>
-  {% endblock %}
+{% endblock %}
