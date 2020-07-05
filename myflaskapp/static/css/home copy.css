@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #95c9c1;
 }
 
 /* Slideshow starts */
@@ -10,7 +10,7 @@ body {
   margin: auto;
 }
 
-/* Hide the images by default 
+/* Hide the images by default */
 .mySlides {
   display: none;
 }
@@ -185,6 +185,20 @@ h1.featured-header-blog {
     -5px -5px 10px rgba(255, 255, 255, 1);
 }
 
-.jumbotron.text-center{
-  background-color: rgba(252, 233, 67, 0.788);
+.custom-design {
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7),
+    -5px -5px 10px rgba(255, 255, 255, 1);
+  padding: 20px;
+  border-radius: 20px;
+}
+h2.text-gray-900.text-lg.title-font.font-medium.mb-2 {
+  font-weight: 800;
+  font-size: 20px;
+}
+.custom-button {
+  background-color: black;
+}
+.title-font {
+  text-decoration: none;
 }

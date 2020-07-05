@@ -49,6 +49,11 @@ def mandi():
     return render_template('mandi.html')
 
 # Mandi Price
+@app.route('/purchase')
+def purchase():
+    return render_template('purchase.html')
+
+# Mandi Price
 @app.route('/protip')
 def protip():
     return render_template('protip.html')

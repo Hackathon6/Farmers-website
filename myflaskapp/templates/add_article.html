@@ -12,7 +12,16 @@ href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min
 {% endblock %}
 
 {% block body %}
-  <h1>Add Article</h1>
+<style>
+  .form-group{
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+
+  }
+  
+</style>
+  <h1 style="text-align: center;">Add Article</h1>
   {% from "includes/_formhelpers.html" import render_field %}
   <form method="POST" action="">
     <div class="form-group">
@@ -47,6 +56,6 @@ href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min
       
         
       
-    <p><input class="btn btn-primary" type="submit" value="Submit">
+    <p><input style="margin-left: 47%;" class="btn btn-primary" type="submit" value="Submit">
   </form>
 {% endblock %}

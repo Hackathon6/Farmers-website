@@ -13,7 +13,16 @@ href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min
 {% endblock %}
 
 {% block body %}
-  <h1>Login</h1>
+<style>
+  .form-group{
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+
+  }
+  
+</style>
+  <h1 style="text-align: center;">Login</h1>
   <form action="" method="POST">
     <div class="form-group">
       <label>Username</label>
@@ -23,6 +32,6 @@ href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min
       <label>Password</label>
       <input type="password" name="password" class="form-control" value={{request.form.password}}>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button style="margin-left: 47%;" type="submit" class="btn btn-primary">Submit</button>
   </form>
 {% endblock %}
