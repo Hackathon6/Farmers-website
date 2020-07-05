@@ -205,10 +205,10 @@ class ArticleForm(Form):
     product = StringField('Product', [validators.Length(min=1, max=25)])
     variety = StringField('Variety', [validators.Length(min=1, max=50)])
     packaging_type = StringField('Packaging Type', [validators.Length(min=1, max=50)])
-    packaging_size= IntegerField('Packaging Size')
-    quantity_expected = IntegerField('Quantity Expected')
+    packaging_size= IntegerField('Packaging Size(units/box)')
+    quantity_expected = IntegerField('Quantity Expected(kg)')
     quality_expected = StringField('Quality Expected', [validators.Length(min=1, max=50)])
-    price = IntegerField('Price')
+    price = IntegerField('Price(Rs/kg)')
     state = StringField('State', [validators.Length(min=1, max=50)])
     
    
